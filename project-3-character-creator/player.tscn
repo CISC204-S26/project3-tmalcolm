@@ -2,8 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://6fpxueh05b4j" path="res://creator creator folder/Character creator background _.png" id="2_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://bjm1iiqcf8fg8" path="res://creator creator folder/Naked person base.png" id="3_nvl01"]
+[ext_resource type="Texture2D" uid="uid://cchuofybf4god" path="res://creator creator folder/character eyes #6.png" id="4_ivps1"]
 [ext_resource type="Texture2D" uid="uid://ciiene0swucfb" path="res://creator creator folder/Arrow clicker.png" id="5_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://vllgqa4lnix6" path="res://creator creator folder/Character eyes #1.png" id="5_urp6f"]
+[ext_resource type="Texture2D" uid="uid://ykgwuk6cip2q" path="res://creator creator folder/Character eyes #2.png" id="6_bwjto"]
+[ext_resource type="Texture2D" uid="uid://cr2gedvvtdfwb" path="res://creator creator folder/Character eyes #3.png" id="7_606se"]
+[ext_resource type="Texture2D" uid="uid://c2m1v8k6txufs" path="res://creator creator folder/Character eyes #4.png" id="8_u1c27"]
+[ext_resource type="Texture2D" uid="uid://cq8jcc2170y5a" path="res://creator creator folder/Character eyes #5.png" id="9_op7ga"]
+[ext_resource type="Texture2D" uid="uid://ckcca5xgg3i2b" path="res://creator creator folder/Hair#4.png" id="9_q13i1"]
 [ext_resource type="Script" uid="uid://c0two4jc4l7xk" path="res://control.gd" id="10_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://dl3fhylkmmarg" path="res://creator creator folder/Hair#3.png" id="10_pylmc"]
+[ext_resource type="Texture2D" uid="uid://d2vi8pufsfckf" path="res://creator creator folder/Hair#1.png" id="11_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://bibt3ljluhxwd" path="res://creator creator folder/Hair#2.png" id="12_5tmop"]
+[ext_resource type="Texture2D" uid="uid://dnym0nccrq2ku" path="res://creator creator folder/Outfit#2.png" id="13_7ahtn"]
+[ext_resource type="Texture2D" uid="uid://cjres45r8vqaf" path="res://creator creator folder/Outfit#1.png" id="14_7lmhl"]
+[ext_resource type="Texture2D" uid="uid://cjcf5vlh7sovb" path="res://creator creator folder/Outfit#3.png" id="15_dx0e4"]
+[ext_resource type="Texture2D" uid="uid://b7mbtgmfko1ng" path="res://creator creator folder/Outfit#4.png" id="16_jm5j8"]
 
 [node name="player" type="Node2D" unique_id=1059976695]
 
@@ -26,41 +40,183 @@ metadata/_edit_lock_ = true
 
 [node name="Eyes" type="Sprite2D" parent="CompositeSprites" unique_id=169968610]
 
+[node name="Eyes#1" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=1248049855]
+visible = false
+position = Vector2(286.6875, 104.0625)
+scale = Vector2(0.034484856, 0.033142086)
+texture = ExtResource("4_ivps1")
+
+[node name="Eyes#2" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=10631773]
+visible = false
+position = Vector2(289, 99.06251)
+scale = Vector2(0.041625984, 0.04302979)
+texture = ExtResource("5_urp6f")
+
+[node name="Eyes#3" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=357309425]
+visible = false
+position = Vector2(289.99997, 101)
+scale = Vector2(0.041351303, 0.05078125)
+texture = ExtResource("6_bwjto")
+
+[node name="Eyes#4" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=1082929117]
+visible = false
+position = Vector2(292, 103.00001)
+scale = Vector2(0.045410164, 0.042236302)
+texture = ExtResource("7_606se")
+
+[node name="Eyes#5" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=345163555]
+visible = false
+position = Vector2(287, 101)
+scale = Vector2(0.03881836, 0.040039063)
+texture = ExtResource("8_u1c27")
+
+[node name="Eyes#6" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=1196197011]
+position = Vector2(289, 102)
+scale = Vector2(0.0390625, 0.028808594)
+texture = ExtResource("9_op7ga")
+
 [node name="Hair" type="Sprite2D" parent="CompositeSprites" unique_id=1288634356]
+
+[node name="Hair#1" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=915383760]
+visible = false
+position = Vector2(304, 113)
+scale = Vector2(0.11621094, 0.13281251)
+texture = ExtResource("11_pbfsw")
+
+[node name="Hair#2" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=1883286133]
+visible = false
+position = Vector2(298.99994, 101)
+scale = Vector2(0.07836913, 0.0739746)
+texture = ExtResource("12_5tmop")
+
+[node name="Hair#3" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=1369531411]
+visible = false
+position = Vector2(317, 167)
+scale = Vector2(0.122070305, 0.1427002)
+texture = ExtResource("10_pylmc")
+
+[node name="Hair#4" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=129075950]
+position = Vector2(300, 115)
+scale = Vector2(0.095214844, 0.097167976)
+texture = ExtResource("9_q13i1")
 
 [node name="Clothes" type="Sprite2D" parent="CompositeSprites" unique_id=1786216414]
 
-[node name="ArrowClicker" type="Sprite2D" parent="CompositeSprites" unique_id=1955945852]
+[node name="Outfit#1" type="Sprite2D" parent="CompositeSprites/Clothes" unique_id=1650493256]
 visible = false
-position = Vector2(701, 124)
-scale = Vector2(0.032897957, 0.03666687)
+position = Vector2(349.49997, 374.375)
+scale = Vector2(0.23779297, 0.25549316)
+texture = ExtResource("14_7lmhl")
+
+[node name="Outfit#2" type="Sprite2D" parent="CompositeSprites/Clothes" unique_id=1583121762]
+visible = false
+position = Vector2(333.5, 386.0625)
+scale = Vector2(0.23291013, 0.24798584)
+texture = ExtResource("13_7ahtn")
+
+[node name="Outfit#3" type="Sprite2D" parent="CompositeSprites/Clothes" unique_id=588747240]
+visible = false
+position = Vector2(336.875, 392.12503)
+scale = Vector2(0.22839355, 0.243042)
+texture = ExtResource("16_jm5j8")
+
+[node name="Outfit#4" type="Sprite2D" parent="CompositeSprites/Clothes" unique_id=398330197]
+position = Vector2(334.99997, 379.5)
+scale = Vector2(0.23925783, 0.25048828)
+texture = ExtResource("15_dx0e4")
+
+[node name="ArrowClicker" type="Sprite2D" parent="CompositeSprites" unique_id=1955945852]
+position = Vector2(680.989, 118.89917)
+rotation = -1.5146494
+scale = Vector2(0.057639696, 0.06760859)
 texture = ExtResource("5_n7ghd")
 
-[node name="ArrowClicker2" type="Sprite2D" parent="CompositeSprites" unique_id=793766505]
-visible = false
-position = Vector2(984.00006, 123)
-scale = Vector2(0.032897957, 0.03666687)
+[node name="ArrowClicker3" type="Sprite2D" parent="CompositeSprites" unique_id=401549141]
+position = Vector2(675, 296)
+rotation = -1.5146494
+scale = Vector2(0.057639696, 0.06760859)
+texture = ExtResource("5_n7ghd")
+
+[node name="ArrowClicker4" type="Sprite2D" parent="CompositeSprites" unique_id=33814753]
+position = Vector2(687, 498)
+rotation = -1.5146494
+scale = Vector2(0.057639696, 0.06760859)
+texture = ExtResource("5_n7ghd")
+
+[node name="ArrowClicker2" type="Sprite2D" parent="CompositeSprites" unique_id=1631844602]
+position = Vector2(996.00006, 133)
+rotation = 1.572465
+scale = Vector2(0.057639696, 0.06760859)
+texture = ExtResource("5_n7ghd")
+
+[node name="ArrowClicker5" type="Sprite2D" parent="CompositeSprites" unique_id=1961719083]
+position = Vector2(997.9999, 306)
+rotation = 1.572465
+scale = Vector2(0.057639696, 0.06760859)
+texture = ExtResource("5_n7ghd")
+
+[node name="ArrowClicker6" type="Sprite2D" parent="CompositeSprites" unique_id=501797239]
+position = Vector2(993, 516)
+rotation = 1.572465
+scale = Vector2(0.057639696, 0.06760859)
 texture = ExtResource("5_n7ghd")
 
 [node name="Control" type="Control" parent="." unique_id=14011638]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("10_n7ghd")
 
-[node name="left arrow eyes" type="Button" parent="." unique_id=298600827]
-offset_left = 647.0
-offset_top = 151.0
-offset_right = 755.0
-offset_bottom = 205.0
+[node name="Left Clothes Button" type="Button" parent="Control" unique_id=36219866]
+layout_mode = 0
+offset_left = 641.0
+offset_top = 477.0
+offset_right = 740.0
+offset_bottom = 530.0
+metadata/_edit_lock_ = true
 
-[node name="right arrow eyes" type="Button" parent="." unique_id=426974712]
-offset_left = 916.0
-offset_top = 152.0
-offset_right = 1045.0
-offset_bottom = 206.0
+[node name="Right Clothes Button" type="Button" parent="Control" unique_id=822139375]
+layout_mode = 0
+offset_left = 945.0
+offset_top = 486.0
+offset_right = 1047.0
+offset_bottom = 541.0
+metadata/_edit_lock_ = true
 
-[connection signal="pressed" from="left arrow eyes" to="Control" method="_on_left_arrow_eye_pressed"]
-[connection signal="pressed" from="right arrow eyes" to="Control" method="_on_right_arrow_eyes_pressed"]
+[node name="Right hair Button" type="Button" parent="Control" unique_id=232303057]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 265.0
+offset_right = 1040.0
+offset_bottom = 330.0
+metadata/_edit_lock_ = true
+
+[node name="Left Hair button" type="Button" parent="Control" unique_id=2040978511]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 277.0
+offset_right = 734.0
+offset_bottom = 328.0
+metadata/_edit_lock_ = true
+
+[node name="Left arrow eyes" type="Button" parent="." unique_id=298600827]
+offset_left = 633.0
+offset_top = 101.0
+offset_right = 732.0
+offset_bottom = 158.0
+metadata/_edit_lock_ = true
+
+[node name="Right arrow eyes" type="Button" parent="." unique_id=426974712]
+offset_left = 938.0
+offset_top = 99.0
+offset_right = 1044.0
+offset_bottom = 158.0
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Control/Left Clothes Button" to="Control" method="_on_left_clothes_button_pressed"]
+[connection signal="pressed" from="Control/Right Clothes Button" to="Control" method="_on_right_clothes_button_pressed"]
+[connection signal="pressed" from="Control/Right hair Button" to="Control" method="_on_right_hair_button_pressed"]
+[connection signal="pressed" from="Control/Left Hair button" to="Control" method="_on_left_hair_button_pressed"]
+[connection signal="pressed" from="Left arrow eyes" to="Control" method="_on_left_arrow_eye_pressed"]
+[connection signal="pressed" from="Right arrow eyes" to="Control" method="_on_right_arrow_eyes_pressed"]
