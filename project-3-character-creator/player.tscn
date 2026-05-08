@@ -69,62 +69,35 @@ position = Vector2(292, 107.99997)
 scale = Vector2(0.039916992, 0.03735351)
 texture = ExtResource("9_op7ga")
 
-[node name="Eye button right" type="Button" parent="CompositeSprites/EyeSprite2" unique_id=279809860]
-anchors_preset = -1
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 925.0
-offset_top = 154.99997
-offset_right = 1035.0
-offset_bottom = 188.99997
-
-[node name="eye button left" type="Button" parent="CompositeSprites/EyeSprite2" unique_id=1974450129]
-anchors_preset = -1
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 239.56801
-anchor_bottom = 189.00002
-offset_left = 646.0
-offset_top = 154.99997
-offset_right = 521.432
-offset_bottom = -4.5776367e-05
-
-[node name="EyeSprite" type="Sprite2D" parent="CompositeSprites" unique_id=1250560677]
-visible = false
+[node name="Eyes" type="Sprite2D" parent="CompositeSprites" unique_id=1250560677]
 position = Vector2(0, 3.0517578e-05)
 
-[node name="Eyes #1" type="Sprite2D" parent="CompositeSprites/EyeSprite" unique_id=998197636]
-visible = false
+[node name="Eyes #1" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=998197636]
 position = Vector2(289, 105.99997)
 scale = Vector2(0.032897957, 0.034362804)
 texture = ExtResource("4_ivps1")
 
-[node name="Eyes #2" type="Sprite2D" parent="CompositeSprites/EyeSprite" unique_id=1607681897]
-visible = false
+[node name="Eyes #2" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=1607681897]
 position = Vector2(289.78128, 99.71872)
 scale = Vector2(0.04122922, 0.037384033)
 texture = ExtResource("5_urp6f")
 
-[node name="Eyes #3" type="Sprite2D" parent="CompositeSprites/EyeSprite" unique_id=376267616]
-visible = false
+[node name="Eyes #3" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=376267616]
 position = Vector2(291, 101.99996)
 scale = Vector2(0.041778576, 0.042327877)
 texture = ExtResource("6_bwjto")
 
-[node name="Eyes #4" type="Sprite2D" parent="CompositeSprites/EyeSprite" unique_id=1982627313]
-visible = false
+[node name="Eyes #4" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=1982627313]
 position = Vector2(290, 101.99997)
 scale = Vector2(0.04278564, 0.039245583)
 texture = ExtResource("7_606se")
 
-[node name="Eyes #5" type="Sprite2D" parent="CompositeSprites/EyeSprite" unique_id=317959328]
-visible = false
+[node name="Eyes #5" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=317959328]
 position = Vector2(288.00003, 99.99997)
 scale = Vector2(0.03881836, 0.04064941)
 texture = ExtResource("8_u1c27")
 
-[node name="Eyes #6" type="Sprite2D" parent="CompositeSprites/EyeSprite" unique_id=924175557]
-visible = false
+[node name="Eyes #6" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=924175557]
 position = Vector2(292, 107.99997)
 scale = Vector2(0.039916992, 0.03735351)
 texture = ExtResource("9_op7ga")
@@ -152,14 +125,16 @@ offset_bottom = 40.0
 script = ExtResource("10_n7ghd")
 
 [node name="left arrow eyes" type="Button" parent="." unique_id=298600827]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 647.0
+offset_top = 151.0
+offset_right = 755.0
+offset_bottom = 205.0
 
 [node name="right arrow eyes" type="Button" parent="." unique_id=426974712]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 916.0
+offset_top = 152.0
+offset_right = 1045.0
+offset_bottom = 206.0
 
-[connection signal="pressed" from="CompositeSprites/EyeSprite2/Eye button right" to="." method="_on_eye_button_right_pressed"]
-[connection signal="pressed" from="CompositeSprites/EyeSprite2/eye button left" to="." method="_on_eye_button_left_pressed"]
 [connection signal="pressed" from="left arrow eyes" to="Control" method="_on_left_arrow_eye_pressed"]
 [connection signal="pressed" from="right arrow eyes" to="Control" method="_on_right_arrow_eyes_pressed"]
