@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://h5vgsisyp0wv"]
 
-[ext_resource type="Script" uid="uid://cbuqfykgc0iyd" path="res://player.gd" id="1_b26j0"]
 [ext_resource type="Texture2D" uid="uid://6fpxueh05b4j" path="res://creator creator folder/Character creator background _.png" id="2_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://bjm1iiqcf8fg8" path="res://creator creator folder/Naked person base.png" id="3_nvl01"]
 [ext_resource type="Texture2D" uid="uid://cchuofybf4god" path="res://creator creator folder/character eyes #6.png" id="4_ivps1"]
@@ -10,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://cr2gedvvtdfwb" path="res://creator creator folder/Character eyes #3.png" id="7_606se"]
 [ext_resource type="Texture2D" uid="uid://c2m1v8k6txufs" path="res://creator creator folder/Character eyes #4.png" id="8_u1c27"]
 [ext_resource type="Texture2D" uid="uid://cq8jcc2170y5a" path="res://creator creator folder/Character eyes #5.png" id="9_op7ga"]
+[ext_resource type="Script" uid="uid://c0two4jc4l7xk" path="res://control.gd" id="10_n7ghd"]
 
 [node name="player" type="Node2D" unique_id=1059976695]
-script = ExtResource("1_b26j0")
 
 [node name="Background" type="Node2D" parent="." unique_id=2140921161]
 
@@ -130,26 +129,6 @@ position = Vector2(292, 107.99997)
 scale = Vector2(0.039916992, 0.03735351)
 texture = ExtResource("9_op7ga")
 
-[node name="Eye button right" type="Button" parent="CompositeSprites/EyeSprite" unique_id=1172507548]
-anchors_preset = -1
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 925.0
-offset_top = 154.99997
-offset_right = 1035.0
-offset_bottom = 188.99997
-
-[node name="eye button left" type="Button" parent="CompositeSprites/EyeSprite" unique_id=1316375190]
-anchors_preset = -1
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 239.56801
-anchor_bottom = 189.00002
-offset_left = 646.0
-offset_top = 154.99997
-offset_right = 521.432
-offset_bottom = -4.5776367e-05
-
 [node name="Hair" type="Sprite2D" parent="CompositeSprites" unique_id=116148365]
 
 [node name="Clothes" type="Sprite2D" parent="CompositeSprites" unique_id=328108730]
@@ -164,7 +143,23 @@ position = Vector2(984.00006, 123)
 scale = Vector2(0.032897957, 0.03666687)
 texture = ExtResource("5_n7ghd")
 
+[node name="Control" type="Control" parent="." unique_id=14011638]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_n7ghd")
+
+[node name="left arrow eyes" type="Button" parent="." unique_id=298600827]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="right arrow eyes" type="Button" parent="." unique_id=426974712]
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="pressed" from="CompositeSprites/EyeSprite2/Eye button right" to="." method="_on_eye_button_right_pressed"]
 [connection signal="pressed" from="CompositeSprites/EyeSprite2/eye button left" to="." method="_on_eye_button_left_pressed"]
-[connection signal="pressed" from="CompositeSprites/EyeSprite/Eye button right" to="." method="_on_eye_button_right_pressed"]
-[connection signal="pressed" from="CompositeSprites/EyeSprite/eye button left" to="." method="_on_eye_button_left_pressed"]
+[connection signal="pressed" from="left arrow eyes" to="Control" method="_on_left_arrow_eye_pressed"]
+[connection signal="pressed" from="right arrow eyes" to="Control" method="_on_right_arrow_eyes_pressed"]
