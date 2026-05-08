@@ -1,8 +1,8 @@
 extends Control
 
-@onready var eyes = $Eyes
-@onready var hair = $hair
-@onready var clothes = $Clothes
+@onready var eyes = $CompositeSprites/Eyes
+@onready var hair = $CompositeSprites/Hair
+@onready var clothes = $CompositeSprites/Clothes
 
 var eye_options = [
 	preload("res://creator creator folder/Character eyes #1.png"), 
