@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://h5vgsisyp0wv"]
+
+[ext_resource type="Script" uid="uid://cbuqfykgc0iyd" path="res://player.gd" id="1_b26j0"]
+[ext_resource type="Texture2D" uid="uid://6fpxueh05b4j" path="res://creator creator folder/Character creator background _.png" id="2_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://bjm1iiqcf8fg8" path="res://creator creator folder/Naked person base.png" id="3_nvl01"]
+[ext_resource type="Texture2D" uid="uid://cchuofybf4god" path="res://creator creator folder/character eyes #6.png" id="4_ivps1"]
+[ext_resource type="Texture2D" uid="uid://vllgqa4lnix6" path="res://creator creator folder/Character eyes #1.png" id="5_urp6f"]
+[ext_resource type="Texture2D" uid="uid://ykgwuk6cip2q" path="res://creator creator folder/Character eyes #2.png" id="6_bwjto"]
+[ext_resource type="Texture2D" uid="uid://cr2gedvvtdfwb" path="res://creator creator folder/Character eyes #3.png" id="7_606se"]
+[ext_resource type="Texture2D" uid="uid://c2m1v8k6txufs" path="res://creator creator folder/Character eyes #4.png" id="8_u1c27"]
+[ext_resource type="Texture2D" uid="uid://cq8jcc2170y5a" path="res://creator creator folder/Character eyes #5.png" id="9_op7ga"]
+
+[node name="player" type="Node2D" unique_id=1059976695]
+script = ExtResource("1_b26j0")
+
+[node name="Background" type="Node2D" parent="." unique_id=2140921161]
+
+[node name="CharacterCreatorBackground" type="Sprite2D" parent="Background" unique_id=1986370322]
+position = Vector2(576, 322)
+scale = Vector2(0.560791, 0.3157959)
+texture = ExtResource("2_n7ghd")
+metadata/_edit_lock_ = true
+
+[node name="CompositeSprites" type="Node2D" parent="." unique_id=1464513104]
+
+[node name="Body" type="Sprite2D" parent="CompositeSprites" unique_id=1560225765]
+position = Vector2(323, 326)
+scale = Vector2(0.2730713, 0.2961426)
+texture = ExtResource("3_nvl01")
+metadata/_edit_lock_ = true
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprites" unique_id=1250560677]
+position = Vector2(0, 3.0517578e-05)
+
+[node name="Eyes #1" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=998197636]
+visible = false
+position = Vector2(289, 105.99997)
+scale = Vector2(0.032897957, 0.034362804)
+texture = ExtResource("4_ivps1")
+
+[node name="Eyes #2" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=1607681897]
+visible = false
+position = Vector2(291.00003, 100.99997)
+scale = Vector2(0.042419426, 0.03863525)
+texture = ExtResource("5_urp6f")
+
+[node name="Eyes #3" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=376267616]
+visible = false
+position = Vector2(291, 101.99996)
+scale = Vector2(0.041778576, 0.042327877)
+texture = ExtResource("6_bwjto")
+
+[node name="Eyes #4" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=1982627313]
+visible = false
+position = Vector2(290, 101.99997)
+scale = Vector2(0.04278564, 0.039245583)
+texture = ExtResource("7_606se")
+
+[node name="Eyes #5" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=317959328]
+visible = false
+position = Vector2(288.00003, 99.99997)
+scale = Vector2(0.03881836, 0.04064941)
+texture = ExtResource("8_u1c27")
+
+[node name="Eyes #6" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=924175557]
+visible = false
+position = Vector2(292, 107.99997)
+scale = Vector2(0.039916992, 0.03735351)
+texture = ExtResource("9_op7ga")
+
+[node name="Hair" type="Sprite2D" parent="CompositeSprites" unique_id=116148365]
+
+[node name="Clothes" type="Sprite2D" parent="CompositeSprites" unique_id=328108730]
