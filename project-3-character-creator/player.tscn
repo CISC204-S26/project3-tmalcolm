@@ -38,6 +38,32 @@ scale = Vector2(0.2730713, 0.2961426)
 texture = ExtResource("3_nvl01")
 metadata/_edit_lock_ = true
 
+[node name="Hair" type="Sprite2D" parent="CompositeSprites" unique_id=1288634356]
+position = Vector2(0, 3.0517578e-05)
+
+[node name="Hair#1" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=915383760]
+visible = false
+position = Vector2(304, 113)
+scale = Vector2(0.11621094, 0.13281251)
+texture = ExtResource("11_pbfsw")
+
+[node name="Hair#2" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=1883286133]
+visible = false
+position = Vector2(298.99994, 101)
+scale = Vector2(0.07836913, 0.0739746)
+texture = ExtResource("12_5tmop")
+
+[node name="Hair#3" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=1369531411]
+visible = false
+position = Vector2(317, 167)
+scale = Vector2(0.122070305, 0.1427002)
+texture = ExtResource("10_pylmc")
+
+[node name="Hair#4" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=129075950]
+position = Vector2(300, 115)
+scale = Vector2(0.095214844, 0.097167976)
+texture = ExtResource("9_q13i1")
+
 [node name="Eyes" type="Sprite2D" parent="CompositeSprites" unique_id=169968610]
 
 [node name="Eyes#1" type="Sprite2D" parent="CompositeSprites/Eyes" unique_id=1248049855]
@@ -74,31 +100,6 @@ texture = ExtResource("8_u1c27")
 position = Vector2(289, 102)
 scale = Vector2(0.0390625, 0.028808594)
 texture = ExtResource("9_op7ga")
-
-[node name="Hair" type="Sprite2D" parent="CompositeSprites" unique_id=1288634356]
-
-[node name="Hair#1" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=915383760]
-visible = false
-position = Vector2(304, 113)
-scale = Vector2(0.11621094, 0.13281251)
-texture = ExtResource("11_pbfsw")
-
-[node name="Hair#2" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=1883286133]
-visible = false
-position = Vector2(298.99994, 101)
-scale = Vector2(0.07836913, 0.0739746)
-texture = ExtResource("12_5tmop")
-
-[node name="Hair#3" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=1369531411]
-visible = false
-position = Vector2(317, 167)
-scale = Vector2(0.122070305, 0.1427002)
-texture = ExtResource("10_pylmc")
-
-[node name="Hair#4" type="Sprite2D" parent="CompositeSprites/Hair" unique_id=129075950]
-position = Vector2(300, 115)
-scale = Vector2(0.095214844, 0.097167976)
-texture = ExtResource("9_q13i1")
 
 [node name="Clothes" type="Sprite2D" parent="CompositeSprites" unique_id=1786216414]
 
@@ -221,6 +222,20 @@ offset_right = 1034.0
 offset_bottom = 766.0
 scale = Vector2(0.6800003, 0.64)
 
+[node name="Save Outfit" type="Button" parent="." unique_id=316567349]
+offset_left = 46.0
+offset_top = 442.0
+offset_right = 167.00006
+offset_bottom = 496.0
+text = "SAVE"
+
+[node name="Load" type="Button" parent="." unique_id=1694814351]
+offset_left = 47.0
+offset_top = 364.0
+offset_right = 165.0
+offset_bottom = 425.0
+text = "LOAD"
+
 [connection signal="pressed" from="Control/Left Clothes Button" to="Control" method="_on_left_clothes_button_pressed"]
 [connection signal="pressed" from="Control/Right Clothes Button" to="Control" method="_on_right_clothes_button_pressed"]
 [connection signal="pressed" from="Control/Right hair Button" to="Control" method="_on_right_hair_button_pressed"]
@@ -228,3 +243,5 @@ scale = Vector2(0.6800003, 0.64)
 [connection signal="pressed" from="Left arrow eyes" to="Control" method="_on_left_arrow_eye_pressed"]
 [connection signal="pressed" from="Right arrow eyes" to="Control" method="_on_right_arrow_eyes_pressed"]
 [connection signal="color_changed" from="ColorPicker" to="Control" method="_on_color_picker_color_changed"]
+[connection signal="pressed" from="Save Outfit" to="Control" method="_on_save_outfit_pressed"]
+[connection signal="pressed" from="Load" to="Control" method="_on_load_pressed"]

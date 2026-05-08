@@ -41,6 +41,8 @@ func _ready() -> void:
 	show_only(eyes, eye_index)
 	show_only(hair, hair_index)
 	show_only(clothes, clothes_index)
+	  
+	load_save()
 	
 	for i in range(eyes.size()):
 		eyes[i].visible = false
@@ -68,8 +70,33 @@ func _on_right_arrow_pressed():
 func _on_color_picker_button_color_changed(color):
 	clothes[clothes_index].modulate = color
 	
+func _on_save_pressed():
+	var save_data = {
+		"eye_index": eye_index,
+		"hair_index": hair_index,
+		"clothes_index": clothes_index,
+		"clothes_color": clothes[clothes_index].modulate
+	}
 
+	var file = FileAccess.open("user://savegame.save", FileAccess.WRITE)
+	file.store_var(save_data)
+	file.close()
 
+func load_save():
+	if FileAccess.file_exists("user://savegame.save"):
+		var file = FileAccess.open("user://savegame.save", FileAccess.READ)
+		var save_data = file.get_var()
+		file.close()
+
+		eye_index = save_data["eye_index"]
+		hair_index = save_data["hair_index"]
+		clothes_index = save_data["clothes_index"]
+
+		show_only(eyes, eye_index)
+		show_only(hair, hair_index)
+		show_only(clothes, clothes_index)
+
+		clothes[clothes_index].modulate = save_data["clothes_color"]
 	pass # Replace with function body.
 
 
@@ -154,4 +181,15 @@ func _on_left_hair_button_pressed() -> void:
 
 func _on_color_picker_color_changed(color: Color) -> void:
 	clothes[clothes_index].modulate = color
+	pass # Replace with function body.
+
+
+func _on_save_outfit_pressed() -> void:
+	_on_save_pressed()
+	print("New outfit saved")
+	pass # Replace with function body.
+
+
+func _on_load_pressed() -> void:
+	load_save()
 	pass # Replace with function body.
