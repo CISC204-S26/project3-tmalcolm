@@ -64,8 +64,18 @@ func _on_right_arrow_pressed():
 	if eye_index >= eyes.size():
 		eye_index = 0
 	show_only(eyes, eye_index)
+	
+func _on_color_picker_button_color_changed(color):
+	clothes[clothes_index].modulate = color
+	
+
 
 	pass # Replace with function body.
+
+
+
+
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -139,4 +149,9 @@ func _on_left_hair_button_pressed() -> void:
 		hair_index = hair.size() - 1
 
 	hair[hair_index].visible = true
+	pass # Replace with function body.
+
+
+func _on_color_picker_color_changed(color: Color) -> void:
+	clothes[clothes_index].modulate = color
 	pass # Replace with function body.

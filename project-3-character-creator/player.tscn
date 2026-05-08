@@ -214,9 +214,17 @@ offset_right = 1044.0
 offset_bottom = 158.0
 metadata/_edit_lock_ = true
 
+[node name="ColorPicker" type="ColorPicker" parent="." unique_id=268191426]
+offset_left = 734.0
+offset_top = 132.0
+offset_right = 1034.0
+offset_bottom = 766.0
+scale = Vector2(0.6800003, 0.64)
+
 [connection signal="pressed" from="Control/Left Clothes Button" to="Control" method="_on_left_clothes_button_pressed"]
 [connection signal="pressed" from="Control/Right Clothes Button" to="Control" method="_on_right_clothes_button_pressed"]
 [connection signal="pressed" from="Control/Right hair Button" to="Control" method="_on_right_hair_button_pressed"]
 [connection signal="pressed" from="Control/Left Hair button" to="Control" method="_on_left_hair_button_pressed"]
 [connection signal="pressed" from="Left arrow eyes" to="Control" method="_on_left_arrow_eye_pressed"]
 [connection signal="pressed" from="Right arrow eyes" to="Control" method="_on_right_arrow_eyes_pressed"]
+[connection signal="color_changed" from="ColorPicker" to="Control" method="_on_color_picker_color_changed"]
